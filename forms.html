@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Lot History Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <form class="border" action="index.html" method="post">
+    <div class="firstDiv">
+      <label for="number">Lot #: </label>
+      <input type="text" name="lotNumber" placeholder="Lot Number" id="number">
+      <label for="sliceNum">Slice #: </label>
+      <input type="text" name="sliceNum" placeholder="Slice #" id="sliceNum">
+      <label for="egNum">EG #:</label>
+      <input type="text" name="egNum" placeholder="EG #" id="egNum">
+    </div>
+    <div>
+      <label for="device">New Device:</label>
+      <select id="device" required = "">
+        <option value="" disabled="" selected="">Select value</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <label for="pickmap">Pickmap pulled:</label>
+      <input type="text" id="pickmap">
+      <div>
+        <label for="ecn">ECN Change:</label>
+        <select id="ecn" required = "">
+          <option value="" disabled="" selected="">Select value</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <label for="broken">Broken Wafers:</label>
+        <select id="broken" required = "">
+          <option value="" disabled="" selected="">Select value</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="ecnVer">ECN Version:</label>
+        <input type="text" placeholder="input version" id="ecnVer">
+        <label for="swr">SWR:</label>
+        <select id="swr" required = "">
+          <option value="" disabled="" selected="">Select value</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div>
+        <label for="etcLot">ETS entry lot:</label>
+        <select id="etcLot" required = "">
+          <option value="" disabled="" selected="">Select value</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <label for="swrNum">SWR #:</label>
+        <input type="text" placeholder="swr Number" id="swrNum">
+      </div>
+    </div>
+  </form>
+</body>
+</html>
