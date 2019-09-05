@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <form class="border" action="index.html" method="post">
+  <form id="targetData" class="border" action="index.html" method="post">
     <div class="firstDiv">
       <label for="number">Lot #: </label>
       <input type="text" name="lotNumber" placeholder="Lot Number" id="number">
@@ -15,7 +15,7 @@
       <label for="egNum">EG #:</label>
       <input type="text" name="egNum" placeholder="EG #" id="egNum">
     </div>
-    <div>
+    <div class="firstDiv">
       <label for="device">New Device:</label>
       <select id="device" required = "">
         <option value="" disabled="" selected="">Select value</option>
@@ -58,7 +58,54 @@
         <label for="swrNum">SWR #:</label>
         <input type="text" placeholder="swr Number" id="swrNum">
       </div>
+      <hr>
     </div>
+    <div>
+      <p>Tests completed</p>
+      <div class="testDiv">
+        <label for="testName">Name of Test:</label>
+        <select id="testName"required="">
+          <option value="" disabled="" selected="">Select test</option>
+          <option value="S-Param">S-Param</option>
+          <option value="Power">Power</option>
+          <option value="Pulse">Pulse</option>
+          <option value="RF">RF</option>
+        </select>
+        <label for="proberNum">Prober # </label>
+        <select required="">
+          <option value="" disabled="" selected="">Select probe #</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <label for="GS">GS run:</label>
+        <select id="GS" required ="">
+          <option value="" disabled="" selected="">Select probe #</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <div class="bodyTestDiv">
+          <label for="slice">Slice #</label>
+          <select id="slice"required="">
+            <option value="" disabled="" selected="">Select #</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          <label for="partial">Partial (# Good):</label>
+          <input type="number">
+          <label for="yield">Yield %:</label>
+          <input type="number">
+        </div>
+      </div>
+      <hr>
+    </div>
+    <button type="button" id="addMore">Add more Tests</button>
+    <input type="submit" name="Submit" value="Submit">
   </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
 </body>
 </html>
