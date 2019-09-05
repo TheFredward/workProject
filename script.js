@@ -9,6 +9,7 @@ function addTestFields() {
   $('.testDiv').append(html);
   $('.testDiv').append(divBody);
 };
+
         // <label for='testName'>Name of Test:</label>
         // <select id='testName'required=''>
         //   <option value='' disabled='' selected=''>Select test</option>
