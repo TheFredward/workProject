@@ -1,0 +1,16 @@
+{
+  "name": "workproject_npm",
+  "version": "1.0.0",
+  "description": "using express to fetch data from a post form as an example",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "form",
+    "post"
+  ],
+  "author": "Freddie V",
+  "license": "ISC"
+}

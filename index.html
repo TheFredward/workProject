@@ -12,9 +12,29 @@
       <a href="forms.html"><button>New entry</button></a>
     </div>
     <div>
-      
+      <table>
+        <tr>
+          <td>Lot Number</td>
+          <td>EG Number</td>
+          <td>ETS Entry</td>
+          <td>Slice Number</td>
+          <td>S-Param</td>
+          <td>Power</td>
+          <td>Pulse</td>
+          <td>NF</td>
+        </tr>
+      </table>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var jsonString = JSON.parse( sessionStorage.getItem( 'workForm' ));
+      // create a table to add each of the values
+      // when adding new entry clear the session sessionStorage
+      $( 'button' ).click( function () {
+        // clear workForm
+        sessionStorage.removeItem( 'workForm' );
+      });
+    </script>
   </body>
 </html>
