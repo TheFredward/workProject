@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Lot History</title>
-    <link rel="stylesheet" href="css/styles.css">
-
-  </head>
-  <body>
-    <h1>RF Lot History</h1>
-    <div>
-      <a href="forms.html"><button>New entry</button></a>
-    </div>
-    <div>
-      <table>
-        <tr>
-          <td>Lot Number</td>
-          <td>EG Number</td>
-          <td>ETS Entry</td>
-          <td>Slice Number</td>
-          <td>S-Param</td>
-          <td>Power</td>
-          <td>Pulse</td>
-          <td>NF</td>
-        </tr>
-      </table>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      var jsonString = JSON.parse( sessionStorage.getItem( 'workForm' ));
-      // create a table to add each of the values
-      // when adding new entry clear the session sessionStorage
-      $( 'button' ).click( function () {
-        // clear workForm
-        sessionStorage.removeItem( 'workForm' );
-      });
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Lot History</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>RF Lot History</h1>
+  <div>
+    <a href="forms.html"><button id="newEntry">New entry</button></a>
+  </div>
+  <div>
+    <table id="dynamicTable">
+      <tr>
+        <td>Lot Number</td>
+        <td>Slice Number</td>
+        <td>EG Entry</td>
+        <td>New Device ?</td>
+        <td>Pickmap pulled</td>
+        <td>ECN Change</td>
+        <td>Wafer Broken</td>
+        <td>ECN Version</td>
+        <td>SWR</td>
+        <td>ETS Entry ?</td>
+        <td>SWR Number</td>
+        <td>Test Name</td>
+        <td>Prober Number</td>
+        <td>GS ran?</td>
+        <td>Slice Number</td>
+        <td>Partial</td>
+        <td>Yield(%)</td>
+      </tr>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  var jsonString = JSON.parse( sessionStorage.getItem( 'workForm' ));
+  // create a table to add each of the values
+  if(jsonString){
+    tableCreate(jsonString);
+  }
+  // when adding new entry clear the session sessionStorage
+  $( '#newEntry' ).click( function () {
+    // clear workForm
+    sessionStorage.removeItem( 'workForm' );
+  });
+  //direct to edit page
+  $( 'button').click( function () {
+    window.location.href = "editForm.html";
+  });
+  </script>
+</body>
 </html>
